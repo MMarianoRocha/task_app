@@ -24,5 +24,19 @@ def post_tarefas():
         )
     )
 
+@app.route('/tarefas', methods=['DELETE'])
+def delete_tarefas():
+    tarefa_id = request.json.get('id')
+    tarefa_titulo = request.json.get('titulo')
+    global tarefas
+    tarefas = [t for t in tarefas if t['id'] != tarefa_id]
+    return make_response(
+        jsonify(
+            message="Tarefa removida com sucesso",
+            id=tarefa_id,
+            titulo=tarefa_titulo
+        )
+    )
+
 if __name__ == '__main__':
     app.run()
