@@ -171,11 +171,10 @@ http://localhost:5000
 
 ---
 
-## ✅ Próximos passos (sugestões):
+## ✅ Próximos passos:
 
 - ✅ Adicionar rota PUT para atualizar tarefas  
-- ✅ Criar autenticação de usuário  
+- ✅ Criar front
 - ✅ Fazer deploy no Railway / Render  
-- ✅ Adicionar testes automatizados  
 
 ---
