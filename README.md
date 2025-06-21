@@ -10,7 +10,7 @@ Uma API simples de gerenciamento de tarefas desenvolvida em Flask, usando SQLAlc
 
 ## ✅ Tecnologias usadas:
 
-- **Python 3.x**
+- **Python 3.10
 - **Flask**
 - **Flask SQLAlchemy**
 - **PostgreSQL**
