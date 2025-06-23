@@ -53,6 +53,40 @@ def post_tarefas():
         tarefa=tarefa_ordenada
     ))
 
+@app.route('/tarefas', methods=['PUT'])
+def update_tarefa():
+    dados = request.json
+    tarefa_id = dados.get('cod_id')
+
+    tarefa = Tarefa.query.get(tarefa_id)
+
+    if tarefa:
+        # Atualizar campos se forem enviados
+        if 'titulo' in dados:
+            tarefa.titulo = dados['titulo']
+        if 'descricao' in dados:
+            tarefa.descricao = dados['descricao']
+
+        db.session.commit()
+
+        tarefa_atualizada = OrderedDict([
+            ('cod_id', tarefa.cod_id),
+            ('titulo', tarefa.titulo),
+            ('descricao', tarefa.descricao),
+            ('status', tarefa.status),
+            ('data_criacao', tarefa.data_criacao.strftime('%Y-%m-%d %H:%M:%S'))
+        ])
+
+        return make_response(jsonify(
+            message="Tarefa atualizada com sucesso",
+            tarefa=tarefa_atualizada
+        ))
+    else:
+        return make_response(jsonify(
+            message="Tarefa não encontrada",
+            cod_id=tarefa_id
+        ), 404)
+
 @app.route('/tarefas', methods=['DELETE'])
 def delete_tarefas():
     tarefa_id = request.json.get('cod_id')
