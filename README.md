@@ -22,13 +22,16 @@ Uma API simples de gerenciamento de tarefas desenvolvida em Flask, usando SQLAlc
 
 ```
 task_app/
-├── app.py               # Arquivo principal da aplicação Flask
-├── db.py                # Conexão com o banco de dados
-├── models.py            # Modelos de dados (SQLAlchemy)
-├── config.py            # Configurações de ambiente (variáveis do banco)
-├── requirements.txt     # Dependências do projeto
-├── .env                 # Variáveis de ambiente (não versionar)
-└── venv/                # Ambiente virtual Python
+├── app/                  # Onde vive a aplicação de verdade
+│   ├── __init__.py       # Monta a aplicação
+│   ├── routes.py         # As rotas da API
+│   ├── models.py         # As tabelas do banco (ORM com SQLAlchemy)
+│   ├── db.py             # Cria a instância do banco
+│   └── config.py         # Lê variáveis do .env e monta a URI do banco
+├── run.py                # Arquivo que executa o servidor Flask
+├── requirements.txt      # Lista dos pacotes que o projeto usa
+├── .env                  # Variáveis privadas (como senha do banco)
+└── venv/                 # Ambiente virtual Python
 ```
 
 ---
