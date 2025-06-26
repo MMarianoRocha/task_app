@@ -176,8 +176,7 @@ http://localhost:5000
 
 ## ✅ Próximos passos:
 
-- ✅ Adicionar rota PUT para atualizar tarefas  
-- ✅ Criar front
+- ✅ Ajustar front
 - ✅ Fazer deploy no Railway / Render  
 
 ---
