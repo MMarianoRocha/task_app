@@ -6,10 +6,38 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Minhas Tarefas</h1>
+  <div id="container_bem-vindo">
+    <h1>Bem-vindo ao Gerenciador de Tarefas</h2>
+  </div>
+  <div id="container_tarefas">
+    <h2>Gerenciar Tarefas</h2>
+    <p>O que deseja realizar?</p>
+      <div id="input_selecionar">
+    <button id="adicionar_tarefa">Adicionar Tarefa</button>
+    <button id="remover_tarefa">Remover Tarefa</button>
+    <button id="atualizar_tarefa">Atualizar Tarefa</button>
+  </div>
+      <div id="container_input_tarefas">
+      <label for="titulo">Título:</label>
+      <input type="text" class="input_tarefas"id="titulo" placeholder="Digite o título da tarefa" />
+      <label for="descricao">Descrição:</label>
+      <input type="text" class="input_tarefas" id="descricao" placeholder="Digite a descrição da tarefa" />
+      <button onclick="adicionarTarefa()">Enviar</button>
+    </div>
+  </div>
 
-  <button onclick="carregarTarefas()">Ver Tarefas</button>
-  <ul id="lista-tarefas"></ul>
+    
+  </div>
+  <div id="container_minhas_tarefas">
+    <h2>Minhas Tarefas</h2>
+    <ul id="lista-tarefas"></ul>
+    <script>
+      window.onload = function() {
+        carregarTarefas();
+      }
+    </script>
+  </div>
+  
 
   <script src="script.js"></script>
 </body>
