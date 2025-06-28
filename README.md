@@ -27,7 +27,11 @@ task_app/
 │   ├── routes.py         # As rotas da API
 │   ├── models.py         # As tabelas do banco (ORM com SQLAlchemy)
 │   ├── db.py             # Cria a instância do banco
-│   └── config.py         # Lê variáveis do .env e monta a URI do banco
+|   ├── config.py
+├── frontend              # Front básico 
+│   ├── index.html        
+│   ├── script.js         # Funções básicas para chamada de ação nos cliques
+|   ├── style.css
 ├── run.py                # Arquivo que executa o servidor Flask
 ├── requirements.txt      # Lista dos pacotes que o projeto usa
 ├── .env                  # Variáveis privadas (como senha do banco)
@@ -176,7 +180,8 @@ http://localhost:5000
 
 ## ✅ Próximos passos:
 
-- ✅ Ajustar front
+- ✅ Criar função para chamar a remoção das tarefas por id
+- ✅ Criar função para editar o título e descrição de uma tarefa por id
 - ✅ Fazer deploy no Railway / Render  
 
 ---
