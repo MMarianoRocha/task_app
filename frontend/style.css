@@ -5,6 +5,32 @@ body {
     padding: 0;
 }
 
+div {
+    margin: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#container_minhas_tarefas {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container_input_tarefas {
+    display:none;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
 h1, h2, h3 {
     color: #333;
 }
@@ -28,6 +54,23 @@ button {
     font-size: 1rem;
 }
 
+.input_tarefas {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#container_tarefas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 button:hover {
     background-color: #0056b3;
 }
