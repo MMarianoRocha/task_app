@@ -8,7 +8,8 @@ async function carregarTarefas() {
 
     data.tarefas.forEach(tarefa => {
       const item = document.createElement('li');
-      item.innerHTML = `<strong>ID: ${tarefa.cod_id}</strong> <strong>${tarefa.titulo}</strong>: ${tarefa.descricao} <br> <em>Data de criação: ${tarefa.data_criacao}</em> <br> <span>Status: ${tarefa.status}</span>`;
+      const statusTexto = tarefa.status === 'concluido' ? 'Concluído' : 'Em andamento';
+      item.innerHTML = `<strong>ID: ${tarefa.cod_id}</strong> <strong>${tarefa.titulo}</strong>: ${tarefa.descricao} <br> <em>Data de criação: ${tarefa.data_criacao}</em> <br> <span>Status: ${statusTexto}</span>`;
       lista.appendChild(item);
     });
   } catch (erro) {
