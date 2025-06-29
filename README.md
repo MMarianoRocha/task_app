@@ -180,7 +180,6 @@ http://localhost:5000
 
 ## ✅ Próximos passos:
 
-- ✅ Criar função para chamar a remoção das tarefas por id
 - ✅ Criar função para editar o título e descrição de uma tarefa por id
 - ✅ Fazer deploy no Railway / Render  
 
