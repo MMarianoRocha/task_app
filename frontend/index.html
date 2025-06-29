@@ -7,26 +7,28 @@
 </head>
 <body>
   <div id="container_bem-vindo">
-    <h1>Bem-vindo ao Gerenciador de Tarefas</h2>
+    <h1>Bem-vindo ao Gerenciador de Tarefas</h1>
   </div>
   <div id="container_tarefas">
     <h2>Gerenciar Tarefas</h2>
     <p>O que deseja realizar?</p>
-      <div id="input_selecionar">
-    <button id="adicionar_tarefa">Adicionar Tarefa</button>
-    <button id="remover_tarefa">Remover Tarefa</button>
-    <button id="atualizar_tarefa">Atualizar Tarefa</button>
-  </div>
-      <div id="container_input_tarefas">
-      <label for="titulo">Título:</label>
-      <input type="text" class="input_tarefas"id="titulo" placeholder="Digite o título da tarefa" />
+    <div id="input_selecionar">
+      <button id="adicionar_tarefa">Adicionar Tarefa</button>
+      <button id="remover_tarefa">Remover Tarefa</button>
+      <button id="atualizar_tarefa">Atualizar Tarefa</button>
+    </div>
+    <div id="container_remove_tarefas">
+      <label for="id_tarefa">Id da Tarefa:</label>
+      <input type="number" class="remove_tarefas" id="id_tarefa" placeholder="Digite o ID da tarefa" />
+      <button onclick="removerTarefa()">Remover</button>
+    </div>
+    <div id="container_input_tarefas">
+      <label for="titulo_tarefa">Título:</label>
+      <input type="text" class="input_tarefas" id="titulo_tarefa" placeholder="Digite o título da tarefa" />
       <label for="descricao">Descrição:</label>
       <input type="text" class="input_tarefas" id="descricao" placeholder="Digite a descrição da tarefa" />
       <button onclick="adicionarTarefa()">Enviar</button>
     </div>
-  </div>
-
-    
   </div>
   <div id="container_minhas_tarefas">
     <h2>Minhas Tarefas</h2>
